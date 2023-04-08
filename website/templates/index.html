@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bikes Inventory</title>
+	<!-- Include Bootstrap CSS file -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Bikes Inventory</h1>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Brand</th>
+					<th>Model</th>
+					<th>Price</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for bike in bikes %}
+				<tr>
+					<td>{{ bike.id }}</td>
+					<td>{{ bike.brand }}</td>
+					<td>{{ bike.model }}</td>
+					<td>{{ bike.price }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
+	<!-- Include Bootstrap JavaScript file -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+  
+{% endblock %}

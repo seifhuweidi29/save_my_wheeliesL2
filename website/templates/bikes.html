@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bikes Page</title>
+  </head>
+  <body>
+    <h1>List of Available Bikes</h1>
+    {% for bike in bikes %}
+      <h3>{{ bike.brand }} {{ bike.model }}</h3>
+      <p>Price: ${{ bike.price }}</p>
+    {% endfor %}
+  </body>
+</html>
